@@ -13,10 +13,9 @@ var (
 )
 
 func main() {
-	// Открываем соединение с Serial Port (замените порт и скорость на свои)
 	port, err := serial.OpenPort(&serial.Config{
-		Name: "COM1", // Windows: "COM1"
-		Baud: 9600,   // Скорость передачи
+		Name: "/dev/pts/4", // Windows: "COM1"
+		Baud: 9600,         // Скорость передачи
 	})
 	if err != nil {
 		fmt.Println("Ошибка открытия порта:", err)
